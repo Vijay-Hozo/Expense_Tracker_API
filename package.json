@@ -1,0 +1,24 @@
+{
+  "name": "expense_tracker",
+  "version": "1.0.0",
+  "description": "This is an expense tracker website",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "test"
+  },
+  "keywords": [
+    "expense_tracker"
+  ],
+  "author": "vijay",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.3",
+    "mongoose": "^8.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
