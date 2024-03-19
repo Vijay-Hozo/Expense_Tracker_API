@@ -14,9 +14,10 @@ const Card = (props) => {
     edititem(id)
   }
 
+
 //DELETE
    const deleteitem = (id) => {
-     fetch(`http://localhost:8000/expensetracker-delete/${id}`,{
+     fetch(`https://task-manager-1imi.onrender.com/expensetracker-delete/${id}`,{
        method : 'DELETE',
        })
        .then(response => response.json())
@@ -27,7 +28,8 @@ const Card = (props) => {
 
 //EDIT
  const edititem = (id) => {
-  fetch(`http://localhost:8000/expensetracker-update/${id}`,{
+  try{
+    fetch(`https://task-manager-1imi.onrender.com/expensetracker-update/${id}`,{
     method : 'PATCH',
     headers : {
       'Content-Type' : 'application/json'
@@ -39,9 +41,13 @@ const Card = (props) => {
     })
   }).then(response => response.json())
   .then(data => {
+    console.log(data);
     setUpdate((prev) => !prev) 
     console.log(data)
   })
+  }catch(error){
+    console.log(error)
+  }[setUpdate]
 }
 
 

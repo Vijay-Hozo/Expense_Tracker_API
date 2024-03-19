@@ -31,10 +31,12 @@ const [update,setUpdate] = useState(false);
 //   })
 //   setList([...res]);
 // }
+
+
   
   //GET
   useEffect(()=>{
-    fetch('http://localhost:8000/expensetracker-get')
+    fetch('https://task-manager-1imi.onrender.com/expensetracker-get')
     .then(response => response.json())
     .then(data => {
       setList(data);

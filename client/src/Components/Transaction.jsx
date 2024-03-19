@@ -20,7 +20,7 @@ const Transaction = ({isEdit,setUpdate}) => {
     }
 
     const add = () => {
-      fetch('http://localhost:8000/expensetracker-create',{
+      fetch('https://task-manager-1imi.onrender.com/expensetracker-create',{
             method : 'POST',
             headers : {
               'Content-Type' : 'application/json'
@@ -34,8 +34,7 @@ const Transaction = ({isEdit,setUpdate}) => {
           .then(data => {
             setUpdate((prev) => !prev) 
             console.log(data)
-          })
-          
+          })    
     }
 
     //BUTTON HANDLE
